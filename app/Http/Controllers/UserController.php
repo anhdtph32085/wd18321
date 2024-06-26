@@ -7,7 +7,19 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     function showUser(){
-        echo view('list-user');
+        $users = [
+            [
+                'id'=> 1,
+                'name' => 'dta'
+            ],
+            [
+                'id'=> 2,
+                'name' => 'dta2'
+            ]
+            ];
+        return view('list-user')->with([
+            'users' => $users
+        ]);
     }
 
     function getUser($id,$name = null){
@@ -18,4 +30,6 @@ class UserController extends Controller
     function updateUser(Request $req){
         echo $req -> id;
     }
+
+   
 }

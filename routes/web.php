@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SVController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,5 @@ Route::get('/list-user', [UserController::class, 'showUser']);
 Route::get('/get-user/{id}/{name?}', [UserController::class, 'getUser']);
 
 Route::get('/update-user', [UserController::class, 'updateUser']);
+
+Route::get('/thong-tin-sv', [SVController::class, 'thongTinSv']);

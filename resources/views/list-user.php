@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Xin chao</h1>
+    <h1>Xin chao <?php echo $users[1]['name'] ?></h1>
 </body>
 </html>
