@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Xin chao <?php echo $users[1]['name'] ?></h1>
+    <!-- <?php foreach( $listuser as $key => $us) :?>
+    <h1>Xin chao <?php echo $us['name'] ?></h1>
+    <?php endforeach ?> -->
 </body>
 </html>

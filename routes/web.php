@@ -29,3 +29,15 @@ Route::get('/get-user/{id}/{name?}', [UserController::class, 'getUser']);
 Route::get('/update-user', [UserController::class, 'updateUser']);
 
 Route::get('/thong-tin-sv', [SVController::class, 'thongTinSv']);
+
+Route::get('/add-user', [UserController::class, 'addUser'] );
+
+Route::group(['prefix'=>'user', 'as' => 'user.'],function(){
+    Route::get('/list-user', [UserController::class, 'listUser'] )->name('list');
+    Route::get('/add-user', [UserController::class, 'addUser'] );
+    Route::get('/edit-user/{id}', [UserController::class, 'editUser'] );
+
+    Route::post('/add-user', [UserController::class, 'add_User'] )->name('add_User');
+    Route::post('/update-user/{id}', [UserController::class, 'update_User'] )->name('update_User');
+    Route::get('/del-user/{id}', [UserController::class, 'del_User'] );
+});
