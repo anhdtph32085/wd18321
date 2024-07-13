@@ -19,7 +19,11 @@ use App\Http\Controllers\ProductController;
 // });
 
 Route::get('/test', function () {
-    echo 'xin chao';
+    return view('admin.products.index');
+});
+
+Route::get('/test/add', function () {
+    return view('admin.products.add');
 });
 
 Route::get('/list-user', [UserController::class, 'showUser']);
